@@ -18,18 +18,18 @@
   
     <meta name="description" content="538.把二叉搜索树转换为累加树12345678910111213141516171819202122232425262728293031&#x2F;** * Definition for a binary tree node. * public class TreeNode &amp;#123; *     int val; *     TreeNode left; *     TreeNode right; *">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="538.把二叉搜索树转换为累加树">
 <meta property="og:url" content="http://example.com/Solutions/538.%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E6%8D%A2%E4%B8%BA%E7%B4%AF%E5%8A%A0%E6%A0%91/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="538.把二叉搜索树转换为累加树12345678910111213141516171819202122232425262728293031&#x2F;** * Definition for a binary tree node. * public class TreeNode &amp;#123; *     int val; *     TreeNode left; *     TreeNode right; *">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-31T16:26:12.765Z">
-<meta property="article:modified_time" content="2021-12-03T03:19:56.766Z">
+<meta property="article:modified_time" content="2022-04-01T02:50:26.804Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>Hexo</title>
+  <title>538.把二叉搜索树转换为累加树 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="">
+            <span class="h2" id="subtitle" title="538.把二叉搜索树转换为累加树">
               
             </span>
 
@@ -234,7 +234,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">538.把二叉搜索树转换为累加树</h1>
             
             <div class="markdown-body">
               <h1 id="538-把二叉搜索树转换为累加树"><a href="#538-把二叉搜索树转换为累加树" class="headerlink" title="538.把二叉搜索树转换为累加树"></a>538.把二叉搜索树转换为累加树</h1><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() &#123;&#125;</span><br><span class="hljs-comment"> *     TreeNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) &#123;</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-comment">// right - root - left</span><br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">convertBST</span><span class="hljs-params">(TreeNode root)</span> &#123;<br>        <span class="hljs-keyword">if</span> (root == <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-comment">//right</span><br>        convertBST(root.right);<br>        <span class="hljs-comment">//root</span><br>        sum += root.val;<br>        root.val = sum;<br><br>        <span class="hljs-comment">//left</span><br>        convertBST(root.left);<br>        <span class="hljs-keyword">return</span> root;<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
@@ -243,6 +243,13 @@
             <hr>
             <div>
               <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/leetcode-solution/">leetcode-solution</a>
+                    
+                  </div>
                 
                 
               </div>
@@ -260,7 +267,7 @@
                     
                       <a href="/Solutions/617.%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">617. 合并二叉树</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -269,7 +276,7 @@
                     
                     
                       <a href="/Solutions/541.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II/">
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">541. 反转字符串II</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

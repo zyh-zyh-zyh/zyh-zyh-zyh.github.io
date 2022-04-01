@@ -18,18 +18,18 @@
   
     <meta name="description" content="530. 二叉搜索树的最小绝对差1234567891011121314151617181920class Solution &amp;#123;    LinkedList&lt;Integer&gt; log &#x3D; new LinkedList();    public int getMinimumDifference(TreeNode root) &amp;#123;        long min &#x3D; Lon">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="530. 二叉搜索树的最小绝对差">
 <meta property="og:url" content="http://example.com/Solutions/530.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E7%BB%9D%E5%AF%B9%E5%B7%AE/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="530. 二叉搜索树的最小绝对差1234567891011121314151617181920class Solution &amp;#123;    LinkedList&lt;Integer&gt; log &#x3D; new LinkedList();    public int getMinimumDifference(TreeNode root) &amp;#123;        long min &#x3D; Lon">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-31T16:26:12.764Z">
-<meta property="article:modified_time" content="2021-11-08T13:58:20.665Z">
+<meta property="article:modified_time" content="2022-04-01T02:50:30.515Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>Hexo</title>
+  <title>530. 二叉搜索树的最小绝对差 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="">
+            <span class="h2" id="subtitle" title="530. 二叉搜索树的最小绝对差">
               
             </span>
 
@@ -234,7 +234,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">530. 二叉搜索树的最小绝对差</h1>
             
             <div class="markdown-body">
               <h1 id="530-二叉搜索树的最小绝对差"><a href="#530-二叉搜索树的最小绝对差" class="headerlink" title="530. 二叉搜索树的最小绝对差"></a>530. 二叉搜索树的最小绝对差</h1><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    LinkedList&lt;Integer&gt; log = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>();<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getMinimumDifference</span><span class="hljs-params">(TreeNode root)</span> &#123;<br>        <span class="hljs-type">long</span> <span class="hljs-variable">min</span> <span class="hljs-operator">=</span> Long.MAX_VALUE;<br>        inorder(root);<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt; log.size(); i++) &#123;<br>            <span class="hljs-type">long</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> log.get(i) - log.get(i - <span class="hljs-number">1</span>);<br>            <span class="hljs-keyword">if</span> (value &lt; <span class="hljs-number">0</span>) value = -value;<br>            <span class="hljs-keyword">if</span> (value &lt; min) min = value;<br>        &#125;<br>        <span class="hljs-keyword">return</span> (<span class="hljs-type">int</span>)min;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">inorder</span><span class="hljs-params">(TreeNode root)</span> &#123;<br>        <span class="hljs-keyword">if</span> (root == <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span>;<br>        inorder(root.left);<br>        log.add(root.val);<br>        inorder(root.right);<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
@@ -243,6 +243,13 @@
             <hr>
             <div>
               <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/leetcode-solution/">leetcode-solution</a>
+                    
+                  </div>
                 
                 
               </div>
@@ -260,7 +267,7 @@
                     
                       <a href="/Solutions/541.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">541. 反转字符串II</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -269,7 +276,7 @@
                     
                     
                       <a href="/Solutions/513.%E6%89%BE%E6%A0%91%E5%B7%A6%E4%B8%8B%E8%A7%92%E7%9A%84%E5%80%BC/">
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">513. 找树左下角的值</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

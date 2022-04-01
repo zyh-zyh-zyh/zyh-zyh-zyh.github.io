@@ -18,18 +18,18 @@
   
     <meta name="description" content="860. 柠檬水找零123456789101112131415161718192021222324252627282930313233343536373839404142434445class Solution &amp;#123;    public boolean lemonadeChange(int[] bills) &amp;#123;        int m5 &#x3D; 0;        int m10">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="860. 柠檬水找零">
 <meta property="og:url" content="http://example.com/Solutions/860.%E6%9F%A0%E6%AA%AC%E6%B0%B4%E6%89%BE%E9%9B%B6/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="860. 柠檬水找零123456789101112131415161718192021222324252627282930313233343536373839404142434445class Solution &amp;#123;    public boolean lemonadeChange(int[] bills) &amp;#123;        int m5 &#x3D; 0;        int m10">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-31T16:26:12.777Z">
-<meta property="article:modified_time" content="2022-02-07T14:44:20.518Z">
+<meta property="article:modified_time" content="2022-04-01T02:48:39.267Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>Hexo</title>
+  <title>860. 柠檬水找零 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="">
+            <span class="h2" id="subtitle" title="860. 柠檬水找零">
               
             </span>
 
@@ -234,7 +234,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">860. 柠檬水找零</h1>
             
             <div class="markdown-body">
               <h1 id="860-柠檬水找零"><a href="#860-柠檬水找零" class="headerlink" title="860. 柠檬水找零"></a>860. 柠檬水找零</h1><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">lemonadeChange</span><span class="hljs-params">(<span class="hljs-type">int</span>[] bills)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">m5</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">m10</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">m20</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> v : bills) &#123;<br>            <span class="hljs-comment">// 5</span><br>            <span class="hljs-keyword">if</span> (v == <span class="hljs-number">5</span>) &#123;<br>                m5++;<br>            &#125;<br>            <span class="hljs-comment">// 10</span><br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (v == <span class="hljs-number">10</span>) &#123;<br>                <span class="hljs-comment">//先给10找零</span><br>                <span class="hljs-keyword">if</span> (m5 &lt; <span class="hljs-number">1</span>) &#123;<br>                    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>                &#125;<br>                <span class="hljs-keyword">else</span> &#123;<br>                    m5--;<br>                    m10++;<br>                &#125;<br>            &#125;<br>            <span class="hljs-comment">// 20</span><br>            <span class="hljs-keyword">else</span> &#123;<br>                <span class="hljs-comment">//给20找零 (给20找零 5元充足的话可以没有10元 但不能没有5元)</span><br>                <span class="hljs-comment">// 有10元</span><br>                <span class="hljs-keyword">if</span> (m10 &gt;= <span class="hljs-number">1</span>) &#123;<br>                    <span class="hljs-keyword">if</span> (m5 &gt;= <span class="hljs-number">1</span>) &#123;<br>                        m10--;<br>                        m5--;<br>                    &#125;<br>                    <span class="hljs-keyword">else</span> &#123; <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; &#125;<br>                &#125;<br>                <span class="hljs-comment">//没10元</span><br>                <span class="hljs-keyword">else</span> &#123;<br>                    <span class="hljs-keyword">if</span> (m5 &gt;= <span class="hljs-number">3</span>) &#123;<br>                        m5 -= <span class="hljs-number">3</span>;<br>                    &#125;<br>                    <span class="hljs-keyword">else</span> &#123; <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; &#125;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
@@ -243,6 +243,13 @@
             <hr>
             <div>
               <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/leetcode-solution/">leetcode-solution</a>
+                    
+                  </div>
                 
                 
               </div>
@@ -260,7 +267,7 @@
                     
                       <a href="/Solutions/904.%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AE/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">904. 水果成篮</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -269,7 +276,7 @@
                     
                     
                       <a href="/Solutions/763.%E5%88%92%E5%88%86%E5%AD%97%E6%AF%8D%E5%8C%BA%E9%97%B4/">
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">763. 划分字母区间</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
