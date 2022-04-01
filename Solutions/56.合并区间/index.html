@@ -18,18 +18,18 @@
   
     <meta name="description" content="56. 合并区间1234567891011121314151617181920212223242526272829303132333435class Solution &amp;#123;    public int[][] merge(int[][] intervals) &amp;#123;        int len &#x3D; intervals.length;        Arrays.sort(inter">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="56. 合并区间">
 <meta property="og:url" content="http://example.com/Solutions/56.%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="56. 合并区间1234567891011121314151617181920212223242526272829303132333435class Solution &amp;#123;    public int[][] merge(int[][] intervals) &amp;#123;        int len &#x3D; intervals.length;        Arrays.sort(inter">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-31T16:26:12.704Z">
-<meta property="article:modified_time" content="2022-02-24T02:43:07.579Z">
+<meta property="article:modified_time" content="2022-04-01T02:44:24.047Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>Hexo</title>
+  <title>56. 合并区间 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="">
+            <span class="h2" id="subtitle" title="56. 合并区间">
               
             </span>
 
@@ -234,7 +234,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">56. 合并区间</h1>
             
             <div class="markdown-body">
               <h1 id="56-合并区间"><a href="#56-合并区间" class="headerlink" title="56. 合并区间"></a>56. 合并区间</h1><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span>[][] merge(<span class="hljs-type">int</span>[][] intervals) &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">len</span> <span class="hljs-operator">=</span> intervals.length;<br>        Arrays.sort(intervals, <span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;<span class="hljs-type">int</span>[]&gt;() &#123;<br>            <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(<span class="hljs-type">int</span>[] inter1, <span class="hljs-type">int</span>[] inter2)</span> &#123;<br>                <span class="hljs-keyword">return</span> inter1[<span class="hljs-number">0</span>] - inter2[<span class="hljs-number">0</span>];<br>            &#125;<br>        &#125;);<br>        <span class="hljs-comment">//初始化</span><br>        <span class="hljs-type">int</span>[][] ans = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[len][<span class="hljs-number">2</span>];<br>        <span class="hljs-type">int</span> <span class="hljs-variable">ansIndex</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">left</span> <span class="hljs-operator">=</span> intervals[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>];<br>        <span class="hljs-type">int</span> <span class="hljs-variable">right</span> <span class="hljs-operator">=</span> intervals[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>];<br>        ans[ansIndex][<span class="hljs-number">0</span>] = left;<br>        ans[ansIndex][<span class="hljs-number">1</span>] = right;<br><br>        <span class="hljs-comment">//</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt; len; i++) &#123;<br>            <span class="hljs-comment">//与上一个ans区间无重叠</span><br>            <span class="hljs-keyword">if</span> (intervals[i][<span class="hljs-number">0</span>] &gt; right) &#123;<br>                ansIndex++;<br>                ans[ansIndex][<span class="hljs-number">0</span>] = intervals[i][<span class="hljs-number">0</span>];<br>                ans[ansIndex][<span class="hljs-number">1</span>] = intervals[i][<span class="hljs-number">1</span>];<br>                left = intervals[i][<span class="hljs-number">0</span>];<br>                right = intervals[i][<span class="hljs-number">1</span>];<br>            &#125;<br>            <span class="hljs-comment">//有重叠</span><br>            <span class="hljs-keyword">else</span> &#123;<br>                right = Math.max(right, intervals[i][<span class="hljs-number">1</span>]);<br>                ans[ansIndex][<span class="hljs-number">1</span>] = right;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> Arrays.copyOfRange(ans, <span class="hljs-number">0</span>, ansIndex + <span class="hljs-number">1</span>);<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
@@ -243,6 +243,13 @@
             <hr>
             <div>
               <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/leetcode-solution/">leetcode-solution</a>
+                    
+                  </div>
                 
                 
               </div>
@@ -260,7 +267,7 @@
                     
                       <a href="/Solutions/59.%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5II/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">59. 螺旋矩阵 II</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -269,7 +276,7 @@
                     
                     
                       <a href="/Solutions/55.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/">
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">55. 跳跃游戏</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

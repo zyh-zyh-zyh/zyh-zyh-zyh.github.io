@@ -18,18 +18,18 @@
   
     <meta name="description" content="93. 复原IP地址123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051class Solution &amp;#123;    LinkedList&lt;String&gt; base &#x3D; new LinkedList();    ArrayList&lt;String">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="93. 复原IP地址">
 <meta property="og:url" content="http://example.com/Solutions/93.%E5%A4%8D%E5%8E%9FIP%E5%9C%B0%E5%9D%80/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="93. 复原IP地址123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051class Solution &amp;#123;    LinkedList&lt;String&gt; base &#x3D; new LinkedList();    ArrayList&lt;String">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-31T16:26:12.712Z">
-<meta property="article:modified_time" content="2021-12-18T07:22:03.881Z">
+<meta property="article:modified_time" content="2022-04-01T02:44:56.484Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>Hexo</title>
+  <title>93. 复原IP地址 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="">
+            <span class="h2" id="subtitle" title="93. 复原IP地址">
               
             </span>
 
@@ -234,7 +234,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">93. 复原IP地址</h1>
             
             <div class="markdown-body">
               <h1 id="93-复原IP地址"><a href="#93-复原IP地址" class="headerlink" title="93. 复原IP地址"></a>93. 复原IP地址</h1><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    LinkedList&lt;String&gt; base = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>();<br>    ArrayList&lt;String&gt; ans = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>();<br><br>    <span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title function_">restoreIpAddresses</span><span class="hljs-params">(String s)</span> &#123;<br>        backtrace(s, <span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">backtrace</span><span class="hljs-params">(String s, <span class="hljs-type">int</span> start)</span> &#123;<br>        <span class="hljs-comment">//end condition</span><br>        <span class="hljs-keyword">if</span> (start == s.length() &amp;&amp; base.size() == <span class="hljs-number">4</span>) &#123;<br>            ans.add(concateIP(base));<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <span class="hljs-comment">// 两种条件退出：1. 已遍历完 s 但未凑够4段ip； 2. 已凑够4段ip但s未遍历完</span><br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(start == s.length() ^ base.size() == <span class="hljs-number">4</span>) &#123; <span class="hljs-keyword">return</span>; &#125;<br><br>        <span class="hljs-comment">//backtrace body</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> start; i &lt; s.length(); i++) &#123;<br>            <span class="hljs-keyword">if</span> (i - start == <span class="hljs-number">3</span>) &#123; <span class="hljs-keyword">break</span>; &#125;<br>            <span class="hljs-type">String</span> <span class="hljs-variable">tmp</span> <span class="hljs-operator">=</span> s.substring(start, i + <span class="hljs-number">1</span>);<br>            <span class="hljs-type">int</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> isIP(tmp);<br>            <span class="hljs-keyword">if</span> (num != -<span class="hljs-number">1</span>) &#123;<br>                base.add(tmp);<br>                backtrace(s, i + <span class="hljs-number">1</span>);<br>                base.removeLast();<br>            &#125;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-comment">//判断所截出的 String 是否为合法IP，不合法则返回 -1； 合法则返回对应 int 值</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">isIP</span><span class="hljs-params">(String s)</span> &#123;<br>        <span class="hljs-keyword">if</span> (s.length() &lt; <span class="hljs-number">1</span>) &#123; <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>; &#125;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> Integer.valueOf(s);<br>        <span class="hljs-keyword">if</span> (s.charAt(<span class="hljs-number">0</span>) == <span class="hljs-string">&#x27;0&#x27;</span> &amp;&amp; s.length() &gt; <span class="hljs-number">1</span>) &#123; <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>; &#125;<br>        <span class="hljs-keyword">if</span> (num &lt; <span class="hljs-number">0</span> || num &gt; <span class="hljs-number">255</span>) &#123; <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>; &#125;<br>        <span class="hljs-keyword">return</span> num;<br>    &#125;<br><br>    <span class="hljs-comment">//用保存4段IP String 的 List 拼接出IP String</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">concateIP</span><span class="hljs-params">(LinkedList&lt;String&gt; base)</span> &#123;<br>        <span class="hljs-type">StringBuilder</span> <span class="hljs-variable">sb</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>();<br>        <span class="hljs-keyword">for</span> (String s : base) &#123;<br>            sb.append(s);<br>            sb.append(<span class="hljs-string">&#x27;.&#x27;</span>);<br>        &#125;<br>        sb.deleteCharAt(sb.length() - <span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">return</span> sb.toString();<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
@@ -243,6 +243,13 @@
             <hr>
             <div>
               <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/leetcode-solution/">leetcode-solution</a>
+                    
+                  </div>
                 
                 
               </div>
@@ -260,7 +267,7 @@
                     
                       <a href="/Solutions/94.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">94. 二叉树的中序遍历</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -269,7 +276,7 @@
                     
                     
                       <a href="/Solutions/91.%E8%A7%A3%E7%A0%81%E6%96%B9%E6%B3%95/">
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">91. 解码方法</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
