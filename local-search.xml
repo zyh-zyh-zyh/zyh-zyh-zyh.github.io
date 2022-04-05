@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Hexo g 警告 Warning LF will be replaced by CRLF</title>
+    <link href="/index-html/"/>
+    <url>/index-html/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Hexo-g-警告-Warning-LF-will-be-replaced-by-CRLF"><a href="#Hexo-g-警告-Warning-LF-will-be-replaced-by-CRLF" class="headerlink" title="Hexo g 警告 Warning: LF will be replaced by CRLF"></a>Hexo g 警告 Warning: LF will be replaced by CRLF</h1><p>Windows下在使用 <code>hexo d</code> 命令部署博客时，会出现如下警告：</p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">The file will have its original line endings <span class="hljs-keyword">in</span> your working directory.<br>warning: LF will be replaced by CRLF <span class="hljs-keyword">in</span> index.html.<br></code></pre></div></td></tr></table></figure><p>这个在警告Git会把LF替换为CRLF，不过这是无关紧要，完全可以禁用此功能，可以避免此信息刷屏。设置方法也很简单，在MinGW窗口中输入以下命令即可：</p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">git config --global core.autocrlf <span class="hljs-literal">false</span><br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>🧭实验室词汇百科索引（娱乐向</title>
     <link href="/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E8%AF%8D%E6%B1%87%E7%99%BE%E7%A7%91%E7%B4%A2%E5%BC%95%EF%BC%88%E5%A8%B1%E4%B9%90%E5%90%91/"/>
     <url>/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E8%AF%8D%E6%B1%87%E7%99%BE%E7%A7%91%E7%B4%A2%E5%BC%95%EF%BC%88%E5%A8%B1%E4%B9%90%E5%90%91/</url>
