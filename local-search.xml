@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>Hexo d 警告 Warning LF will be replaced by CRLF</title>
-    <link href="/index-html/"/>
-    <url>/index-html/</url>
+    <title>Hexo d 警告 Warning LF will be replaced by CRLF 刷屏</title>
+    <link href="/Note-Hexo-Warning-CRLF/"/>
+    <url>/Note-Hexo-Warning-CRLF/</url>
     
-    <content type="html"><![CDATA[<h1 id="Hexo-g-警告-Warning-LF-will-be-replaced-by-CRLF"><a href="#Hexo-g-警告-Warning-LF-will-be-replaced-by-CRLF" class="headerlink" title="Hexo g 警告 Warning: LF will be replaced by CRLF"></a>Hexo g 警告 Warning: LF will be replaced by CRLF</h1><p>Windows下在使用 <code>hexo d</code> 命令部署博客时，会出现如下警告：</p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">The file will have its original line endings <span class="hljs-keyword">in</span> your working directory.<br>warning: LF will be replaced by CRLF <span class="hljs-keyword">in</span> index.html.<br></code></pre></div></td></tr></table></figure><p>这个在警告Git会把LF替换为CRLF，不过这是无关紧要，完全可以禁用此功能，可以避免此信息刷屏。设置方法也很简单，在MinGW窗口中输入以下命令即可：</p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">git config --global core.autocrlf <span class="hljs-literal">false</span><br></code></pre></div></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="Hexo-g-警告-Warning-LF-will-be-replaced-by-CRLF-刷屏"><a href="#Hexo-g-警告-Warning-LF-will-be-replaced-by-CRLF-刷屏" class="headerlink" title="Hexo g 警告 Warning: LF will be replaced by CRLF 刷屏"></a><code>Hexo g</code> 警告 <code>Warning: LF will be replaced by CRLF</code> 刷屏</h1><p>Windows下在使用 <code>hexo d</code> 命令部署博客时，会出现如下警告：</p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">The file will have its original line endings <span class="hljs-keyword">in</span> your working directory.<br>warning: LF will be replaced by CRLF <span class="hljs-keyword">in</span> index.html.<br></code></pre></div></td></tr></table></figure><p>这个在警告Git会把 <code>LF</code> 替换为 <code>CRLF</code>，不过这是无关紧要，完全可以禁用此功能，可以避免此信息刷屏。设置方法也很简单，在命令行窗口中输入以下命令即可：</p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">git config --global core.autocrlf <span class="hljs-literal">false</span><br></code></pre></div></td></tr></table></figure>]]></content>
     
     
     
