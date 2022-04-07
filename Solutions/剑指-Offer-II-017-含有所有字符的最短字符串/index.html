@@ -16,20 +16,20 @@
   <meta name="author" content="Super Farmer">
   <meta name="keywords" content="">
   
-    <meta name="description" content="538.把二叉搜索树转换为累加树12345678910111213141516171819202122232425262728293031&#x2F;** * Definition for a binary tree node. * public class TreeNode &amp;#123; *     int val; *     TreeNode left; *     TreeNode right; *">
+    <meta name="description" content="剑指 Offer II 017. 含有所有字符的最短字符串1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071class Solution &amp;#123;    HashMap&lt;Ch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="538.把二叉搜索树转换为累加树">
-<meta property="og:url" content="http://example.com/Solutions/538.%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E6%8D%A2%E4%B8%BA%E7%B4%AF%E5%8A%A0%E6%A0%91/index.html">
+<meta property="og:title" content="剑指 Offer II 017. 含有所有字符的最短字符串">
+<meta property="og:url" content="http://example.com/Solutions/%E5%89%91%E6%8C%87-Offer-II-017-%E5%90%AB%E6%9C%89%E6%89%80%E6%9C%89%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
 <meta property="og:site_name" content="🏂Super Farmer&#39;s Blog">
-<meta property="og:description" content="538.把二叉搜索树转换为累加树12345678910111213141516171819202122232425262728293031&#x2F;** * Definition for a binary tree node. * public class TreeNode &amp;#123; *     int val; *     TreeNode left; *     TreeNode right; *">
+<meta property="og:description" content="剑指 Offer II 017. 含有所有字符的最短字符串1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071class Solution &amp;#123;    HashMap&lt;Ch">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-31T16:26:12.765Z">
-<meta property="article:modified_time" content="2022-04-01T02:50:26.804Z">
+<meta property="article:published_time" content="2022-04-07T15:09:52.000Z">
+<meta property="article:modified_time" content="2022-04-07T15:10:53.485Z">
 <meta property="article:author" content="Super Farmer">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>538.把二叉搜索树转换为累加树 - 🏂Super Farmer&#39;s Blog</title>
+  <title>剑指 Offer II 017. 含有所有字符的最短字符串 - 🏂Super Farmer&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="538.把二叉搜索树转换为累加树">
+            <span class="h2" id="subtitle" title="剑指 Offer II 017. 含有所有字符的最短字符串">
               
             </span>
 
@@ -185,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-01 00:26" pubdate>
-        April 1, 2022 am
+      <time datetime="2022-04-07 23:09" pubdate>
+        April 7, 2022 pm
       </time>
     </span>
   
@@ -196,7 +196,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      572 字
+      1.3k 字
     </span>
   
 
@@ -205,7 +205,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5 分钟
+      12 分钟
     </span>
   
 
@@ -234,16 +234,16 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">538.把二叉搜索树转换为累加树</h1>
+            <h1 style="display: none">剑指 Offer II 017. 含有所有字符的最短字符串</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：April 1, 2022 am
+                  本文最后更新于：April 7, 2022 pm
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="538-把二叉搜索树转换为累加树"><a href="#538-把二叉搜索树转换为累加树" class="headerlink" title="538.把二叉搜索树转换为累加树"></a>538.把二叉搜索树转换为累加树</h1><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() &#123;&#125;</span><br><span class="hljs-comment"> *     TreeNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) &#123;</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-comment">// right - root - left</span><br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">convertBST</span><span class="hljs-params">(TreeNode root)</span> &#123;<br>        <span class="hljs-keyword">if</span> (root == <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-comment">//right</span><br>        convertBST(root.right);<br>        <span class="hljs-comment">//root</span><br>        sum += root.val;<br>        root.val = sum;<br><br>        <span class="hljs-comment">//left</span><br>        convertBST(root.left);<br>        <span class="hljs-keyword">return</span> root;<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
+              <h1 id="剑指-Offer-II-017-含有所有字符的最短字符串"><a href="#剑指-Offer-II-017-含有所有字符的最短字符串" class="headerlink" title="剑指 Offer II 017. 含有所有字符的最短字符串"></a>剑指 Offer II 017. 含有所有字符的最短字符串</h1><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    HashMap&lt;Character, Integer&gt; mapS;<br>    HashMap&lt;Character, Integer&gt; mapT;<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">minWindow</span><span class="hljs-params">(String s, String t)</span> &#123;<br>        mapS = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>();<br>        mapT = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>();<br>        <span class="hljs-type">int</span> <span class="hljs-variable">lenS</span> <span class="hljs-operator">=</span> s.length();<br>        <span class="hljs-type">int</span> <span class="hljs-variable">lenT</span> <span class="hljs-operator">=</span> t.length();<br><br>        <span class="hljs-keyword">if</span> (lenS &lt; lenT) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;<br>        &#125;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; lenT; i++) &#123;<br>            <span class="hljs-type">char</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> t.charAt(i);<br>            mapT.put(c, mapT.getOrDefault(c, <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>);<br>        &#125;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; lenT; i++) &#123;<br>            <span class="hljs-type">char</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> s.charAt(i);<br>            mapS.put(c, mapS.getOrDefault(c, <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>);<br>        &#125;<br><br>        <span class="hljs-keyword">if</span> (lenS == lenT) &#123;<br>            <span class="hljs-keyword">if</span> (can()) &#123;<br>                <span class="hljs-keyword">return</span> s;<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-type">int</span> <span class="hljs-variable">left</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; <br>        <span class="hljs-type">int</span> <span class="hljs-variable">right</span> <span class="hljs-operator">=</span> lenT - <span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">minLen</span> <span class="hljs-operator">=</span> Integer.MAX_VALUE;<br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">exist</span> <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">ans1</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">ans2</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br><br>        <span class="hljs-keyword">while</span> (right &lt; lenS &amp;&amp; left &lt; lenS - lenT + <span class="hljs-number">1</span>) &#123;<br>            <span class="hljs-keyword">if</span> (!can()) &#123;<br>                right++;<br>                <span class="hljs-keyword">if</span> (right &gt;= lenS) &#123;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>                mapS.put(s.charAt(right), mapS.getOrDefault(s.charAt(right), <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>);<br>            &#125;<br>            <span class="hljs-keyword">else</span> &#123;<br>                exist = <span class="hljs-literal">true</span>;<br>                <span class="hljs-keyword">if</span> (right - left + <span class="hljs-number">1</span> &lt; minLen) &#123;<br>                    minLen = right - left + <span class="hljs-number">1</span>;<br>                    ans1 = left;<br>                    ans2 = right;<br>                &#125;<br>                mapS.put(s.charAt(left), mapS.getOrDefault(s.charAt(left), <span class="hljs-number">0</span>) - <span class="hljs-number">1</span>);<br>                left++;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (exist) &#123;<br>            <span class="hljs-keyword">return</span> s.substring(ans1, ans2 + <span class="hljs-number">1</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;<br><br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">can</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">for</span> (Character c : mapT.keySet()) &#123;<br>            <span class="hljs-keyword">if</span> (mapT.get(c) &gt; mapS.getOrDefault(c, <span class="hljs-number">0</span>)) &#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
 
             </div>
             <hr>
@@ -271,18 +271,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/Solutions/617.%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">617. 合并二叉树</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/Solutions/541.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II/">
-                        <span class="hidden-mobile">541. 反转字符串II</span>
+                      <a href="/MySQL-log-and-note/">
+                        <span class="hidden-mobile">MySQL-log-and-note</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
