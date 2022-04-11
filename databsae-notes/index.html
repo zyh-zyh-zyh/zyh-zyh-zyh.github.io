@@ -16,20 +16,20 @@
   <meta name="author" content="Super Farmer">
   <meta name="keywords" content="">
   
-    <meta name="description" content="617. 合并二叉树12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879&#x2F;** * Definition for a binary tree node.">
+    <meta name="description" content="数据库知识笔记 索引是帮助MySQL高效获取数据的排好序的数据结构  磁盘预读data page 如 4k, 8k  索引数据结构 二叉树 红黑树 Hash表 B Tree B+ Tree  InnoDB建议建主键，并且 整型 自增 支持事务 支持哈希，但只支持自适应哈希 B+树冗余索引 作为非叶子结点优势：可以范围查找因为 叶子结点之间有双向指针 联合索引索引最左前缀原理最左的索引是B+树有序排">
 <meta property="og:type" content="article">
-<meta property="og:title" content="617. 合并二叉树">
-<meta property="og:url" content="http://example.com/Solutions/617.%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
+<meta property="og:title" content="数据库知识笔记">
+<meta property="og:url" content="http://example.com/databsae-notes/index.html">
 <meta property="og:site_name" content="🏂Super Farmer&#39;s Blog">
-<meta property="og:description" content="617. 合并二叉树12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879&#x2F;** * Definition for a binary tree node.">
+<meta property="og:description" content="数据库知识笔记 索引是帮助MySQL高效获取数据的排好序的数据结构  磁盘预读data page 如 4k, 8k  索引数据结构 二叉树 红黑树 Hash表 B Tree B+ Tree  InnoDB建议建主键，并且 整型 自增 支持事务 支持哈希，但只支持自适应哈希 B+树冗余索引 作为非叶子结点优势：可以范围查找因为 叶子结点之间有双向指针 联合索引索引最左前缀原理最左的索引是B+树有序排">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-31T16:26:12.766Z">
-<meta property="article:modified_time" content="2022-04-01T02:50:19.542Z">
+<meta property="article:published_time" content="2022-04-11T16:16:52.000Z">
+<meta property="article:modified_time" content="2022-04-11T16:18:19.670Z">
 <meta property="article:author" content="Super Farmer">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>617. 合并二叉树 - 🏂Super Farmer&#39;s Blog</title>
+  <title>数据库知识笔记 - 🏂Super Farmer&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="617. 合并二叉树">
+            <span class="h2" id="subtitle" title="数据库知识笔记">
               
             </span>
 
@@ -185,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-01 00:26" pubdate>
-        April 1, 2022 am
+      <time datetime="2022-04-12 00:16" pubdate>
+        April 12, 2022 am
       </time>
     </span>
   
@@ -196,7 +196,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.9k 字
+      835 字
     </span>
   
 
@@ -205,7 +205,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      17 分钟
+      7 分钟
     </span>
   
 
@@ -234,28 +234,62 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">617. 合并二叉树</h1>
+            <h1 style="display: none">数据库知识笔记</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：April 1, 2022 am
+                  本文最后更新于：April 12, 2022 am
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="617-合并二叉树"><a href="#617-合并二叉树" class="headerlink" title="617. 合并二叉树"></a>617. 合并二叉树</h1><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() &#123;&#125;</span><br><span class="hljs-comment"> *     TreeNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) &#123;</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">mergeTrees</span><span class="hljs-params">(TreeNode root1, TreeNode root2)</span> &#123;<br>        <span class="hljs-keyword">if</span> (root1 == <span class="hljs-literal">null</span> &amp;&amp; root2 == <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> root1;<br>        Queue&lt;TreeNode&gt; que1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>();<br>        Queue&lt;TreeNode&gt; que2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>();<br><br>        <span class="hljs-keyword">if</span> (root1 != <span class="hljs-literal">null</span> &amp;&amp; root2 != <span class="hljs-literal">null</span>) &#123;<br>            root1.val += root2.val;<br>            que1.add(root1);<br>            que2.add(root2);<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (root1 != <span class="hljs-literal">null</span>) &#123;<br>            que1.add(root1);<br>            que2.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(<span class="hljs-number">0</span>));<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (root2 != <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-type">TreeNode</span> <span class="hljs-variable">tmp</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(<span class="hljs-number">0</span>);<br>            root1 = tmp;<br>            root1.val += root2.val;<br>            que1.add(root1);<br>            que2.add(root2);<br>        &#125;<br><br>        <span class="hljs-keyword">while</span> (!que1.isEmpty() || !que2.isEmpty()) &#123;<br>            <span class="hljs-type">TreeNode</span> <span class="hljs-variable">node1</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>            <span class="hljs-type">TreeNode</span> <span class="hljs-variable">node2</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>            <span class="hljs-keyword">if</span> (!que1.isEmpty()) node1 = que1.remove();<br>            <span class="hljs-keyword">if</span> (!que2.isEmpty()) node2 = que2.remove();<br><br>            <span class="hljs-keyword">if</span> (node1.left != <span class="hljs-literal">null</span> &amp;&amp; node2.left != <span class="hljs-literal">null</span>) &#123;<br>                node1.left.val += node2.left.val;<br>                que1.add(node1.left);<br>                que2.add(node2.left);<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (node1.left != <span class="hljs-literal">null</span> &amp;&amp; node2.left == <span class="hljs-literal">null</span>) &#123;<br>                que1.add(node1.left);<br>                que2.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(<span class="hljs-number">0</span>));<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (node1.left == <span class="hljs-literal">null</span> &amp;&amp; node2.left != <span class="hljs-literal">null</span>) &#123;<br>                <span class="hljs-type">TreeNode</span> <span class="hljs-variable">tmp</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(node2.left.val);<br>                node1.left = tmp;<br>                que1.add(tmp);<br>                que2.add(node2.left);<br>            &#125;<br><br>            <span class="hljs-keyword">if</span> (node1.right != <span class="hljs-literal">null</span> &amp;&amp; node2.right != <span class="hljs-literal">null</span>) &#123;<br>                node1.right.val += node2.right.val;<br>                que1.add(node1.right);<br>                que2.add(node2.right);<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (node1.right != <span class="hljs-literal">null</span> &amp;&amp; node2.right == <span class="hljs-literal">null</span>) &#123;<br>                que1.add(node1.right);<br>                que2.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(<span class="hljs-number">0</span>));<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (node1.right == <span class="hljs-literal">null</span> &amp;&amp; node2.right != <span class="hljs-literal">null</span>) &#123;<br>                <span class="hljs-type">TreeNode</span> <span class="hljs-variable">tmp</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(node2.right.val);<br>                node1.right = tmp;<br>                que1.add(tmp);<br>                que2.add(node2.right);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> root1;<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
+              <h1 id="数据库知识笔记"><a href="#数据库知识笔记" class="headerlink" title="数据库知识笔记"></a>数据库知识笔记</h1><blockquote>
+<p>索引是帮助MySQL高效获取数据的排好序的数据结构</p>
+</blockquote>
+<p>磁盘预读<br>data page 如 4k, 8k </p>
+<h2 id="索引数据结构"><a href="#索引数据结构" class="headerlink" title="索引数据结构"></a>索引数据结构</h2><ol>
+<li>二叉树</li>
+<li>红黑树</li>
+<li>Hash表</li>
+<li>B Tree</li>
+<li>B+ Tree</li>
+</ol>
+<h3 id="InnoDB"><a href="#InnoDB" class="headerlink" title="InnoDB"></a>InnoDB</h3><p>建议建主键，并且 整型 自增</p>
+<p>支持事务</p>
+<p>支持哈希，但只支持自适应哈希</p>
+<h2 id="B-树"><a href="#B-树" class="headerlink" title="B+树"></a>B+树</h2><p>冗余索引 作为非叶子结点<br>优势：可以范围查找<br>因为 叶子结点之间有双向指针</p>
+<h2 id="联合索引"><a href="#联合索引" class="headerlink" title="联合索引"></a>联合索引</h2><h4 id="索引最左前缀原理"><a href="#索引最左前缀原理" class="headerlink" title="索引最左前缀原理"></a>索引最左前缀原理</h4><p>最左的索引是B+树有序排列 所以不含最左的索引 不是有序的 所以 不含最左索引的语句 查询时不走索引</p>
+<p>MVCC</p>
+<h3 id="回表"><a href="#回表" class="headerlink" title="回表"></a>回表</h3><p>用二级索引 （辅助索引） 会回表</p>
+<h3 id="索引覆盖"><a href="#索引覆盖" class="headerlink" title="索引覆盖"></a>索引覆盖</h3><h3 id="最左匹配"><a href="#最左匹配" class="headerlink" title="最左匹配"></a>最左匹配</h3><h3 id="索引下推"><a href="#索引下推" class="headerlink" title="索引下推"></a>索引下推</h3><p>CBO RBO</p>
+<h2 id="数据库常见面试题"><a href="#数据库常见面试题" class="headerlink" title="数据库常见面试题"></a>数据库常见面试题</h2><h3 id="20个数据库常见面试题讲解"><a href="#20个数据库常见面试题讲解" class="headerlink" title="20个数据库常见面试题讲解"></a>20个数据库常见面试题讲解</h3><ul>
+<li>事务四大特性（ACID）原子性、一致性、隔离性、持久性？</li>
+<li>事务的并发？事务隔离级别，每个级别会引发什么问题，MySQL默认是哪个级别？</li>
+<li>MySQL常见的三种存储引擎（InnoDB、MyISAM、MEMORY）的区别？</li>
+<li>MySQL的MyISAM与InnoDB两种存储引擎在，事务、锁级别，各自的适用场景？</li>
+<li>查询语句不同元素（where、jion、limit、group by、having等等）执行先后顺序？</li>
+<li>什么是临时表，临时表什么时候删除?</li>
+<li>MySQL B+Tree索引和Hash索引的区别？</li>
+<li>聚集索引和非聚集索引区别？</li>
+<li>有哪些锁（乐观锁悲观锁），select 时怎么加排它锁？</li>
+<li>非关系型数据库和关系型数据库区别，优势比较？</li>
+<li>数据库三范式，根据某个场景设计数据表？</li>
+<li>数据库的读写分离、主从复制，主从复制分析的 7 个问题？</li>
+<li>使用explain优化sql和索引？</li>
+<li>MySQL慢查询怎么解决？</li>
+<li>什么是 内连接、外连接、交叉连接、笛卡尔积等？</li>
+<li>mysql都有什么锁，死锁判定原理和具体场景，死锁怎么解决？</li>
+<li>varchar和char的使用场景？</li>
+<li>mysql 高并发环境解决方案？</li>
+<li>数据库崩溃时事务的恢复机制（REDO日志和UNDO日志）？</li>
+</ul>
+<p>20题来源：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_34096182/article/details/87988318?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164969029516780271542441%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=164969029516780271542441&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-4-87988318.142%5Ev7%5Epc_search_result_cache,157%5Ev4%5Econtrol&utm_term=%E6%95%B0%E6%8D%AE%E5%BA%93+%E9%9D%A2%E8%AF%95">【CSDN】20个数据库常见面试题讲解</a></p>
+<h3 id="面试-x2F-笔试第三弹-——-数据库面试问题集锦"><a href="#面试-x2F-笔试第三弹-——-数据库面试问题集锦" class="headerlink" title="面试&#x2F;笔试第三弹 —— 数据库面试问题集锦"></a>面试&#x2F;笔试第三弹 —— 数据库面试问题集锦</h3><p>来源：<a target="_blank" rel="noopener" href="https://blog.csdn.net/justloveyou_/article/details/78308460?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164969153116780264091080%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=164969153116780264091080&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-78308460.142%5Ev7%5Epc_search_result_cache,157%5Ev4%5Econtrol&utm_term=%E6%95%B0%E6%8D%AE%E5%BA%93+%E9%9D%A2%E8%AF%95&spm=1018.2226.3001.4187">【面试&#x2F;笔试第三弹 —— 数据库面试问题集锦】</a></p>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/leetcode-solution/">leetcode-solution</a>
-                    
-                  </div>
                 
                 
               </div>
@@ -271,18 +305,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/Solutions/654.%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">654. 最大二叉树</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/Solutions/538.%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E6%8D%A2%E4%B8%BA%E7%B4%AF%E5%8A%A0%E6%A0%91/">
-                        <span class="hidden-mobile">538.把二叉搜索树转换为累加树</span>
+                      <a href="/Solutions/JianZhi-Offer-II-017/">
+                        <span class="hidden-mobile">剑指 Offer II 017. 含有所有字符的最短字符串</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
