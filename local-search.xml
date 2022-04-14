@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>mission-arrange-strategy</title>
+    <link href="/Solutions/interview/mission-arrange-strategy/"/>
+    <url>/Solutions/interview/mission-arrange-strategy/</url>
+    
+    <content type="html"><![CDATA[<h1 id="任务安排策略"><a href="#任务安排策略" class="headerlink" title="任务安排策略"></a>任务安排策略</h1><p>现有<code>N</code>个任务需要一个人去完成，每个任务耗时<code>1</code>小时，只能同时进行<code>1</code>个任务；<code>N</code>个任务的限时完成时间<code>S</code>同时开始倒计时，在此时间<code>S</code>之前完成即可获得对应得分，超时作废。请选择最优策略，使得总得分最大（无需完成所有任务）。</p><table><thead><tr><th align="center">任务编号</th><th align="center">S</th><th align="center">得分</th></tr></thead><tbody><tr><td align="center">1</td><td align="center">1</td><td align="center">6</td></tr><tr><td align="center">2</td><td align="center">1</td><td align="center">7</td></tr><tr><td align="center">3</td><td align="center">3</td><td align="center">2</td></tr><tr><td align="center">4</td><td align="center">3</td><td align="center">1</td></tr><tr><td align="center">5</td><td align="center">2</td><td align="center">4</td></tr><tr><td align="center">6</td><td align="center">2</td><td align="center">5</td></tr><tr><td align="center">7</td><td align="center">6</td><td align="center">1</td></tr></tbody></table><p><strong>输入</strong><br>第一行为一个整数 <code>N</code> ，表示任务的数量。<br>接下来 <code>N</code> 行，每行包括两个整数，第 <code>1</code> 个整数表示限时完成时间（小时），第 <code>2</code> 个数表示任务的得分。<br><strong>输出</strong><br>输入一个整数表示可以获得的最大得分</p><p><strong>提示：</strong></p><p>提示：任务数量 <code>N ≤ 10^6</code></p><p>时间 <code>S ≤ 7×10^5</code></p><p>答案的最大积分不会超过 <code>2147483647</code></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>leetcode-solution</tag>
+      
+      <tag>interview</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>井字棋相关题目</title>
     <link href="/Solutions/interview/%E4%BA%95%E5%AD%97%E6%A3%8B%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE/"/>
     <url>/Solutions/interview/%E4%BA%95%E5%AD%97%E6%A3%8B%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE/</url>
