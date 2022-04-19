@@ -16,15 +16,15 @@
   <meta name="author" content="Super Farmer">
   <meta name="keywords" content="">
   
-    <meta name="description" content="井字棋相关题目1275. 找出井字棋的获胜者 A 和 B 在一个 3 x 3 的网格上玩井字棋。井字棋游戏的规则如下： 玩家轮流将棋子放在空方格 (“ “) 上。第一个玩家 A 总是用 “X” 作为棋子，而第二个玩家 B 总是用 “O” 作为棋子。“X” 和 “O” 只能放在空方格中，而不能放在已经被占用的方格上。只要有 3 个相同的（非空）棋子排成一条直线（行、列、对角线）时，游戏结束。如果所有">
+    <meta name="description" content="井字棋相关题目1275. 找出井字棋的获胜者 A 和 B 在一个 3 x 3 的网格上玩井字棋。井字棋游戏的规则如下： 玩家轮流将棋子放在空方格 (“ “) 上。第一个玩家 A 总是用 X 作为棋子，而第二个玩家 B 总是用 O 作为棋子。X 和 O 只能放在空方格中，而不能放在已经被占用的方格上。只要有 3 个相同的（非空）棋子排成一条直线（行、列、对角线）时，游戏结束。如果所有方块都放满棋子（">
 <meta property="og:type" content="article">
 <meta property="og:title" content="井字棋相关题目">
 <meta property="og:url" content="http://example.com/Solutions/interview/%E4%BA%95%E5%AD%97%E6%A3%8B%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE/index.html">
 <meta property="og:site_name" content="🏂Super Farmer&#39;s Blog">
-<meta property="og:description" content="井字棋相关题目1275. 找出井字棋的获胜者 A 和 B 在一个 3 x 3 的网格上玩井字棋。井字棋游戏的规则如下： 玩家轮流将棋子放在空方格 (“ “) 上。第一个玩家 A 总是用 “X” 作为棋子，而第二个玩家 B 总是用 “O” 作为棋子。“X” 和 “O” 只能放在空方格中，而不能放在已经被占用的方格上。只要有 3 个相同的（非空）棋子排成一条直线（行、列、对角线）时，游戏结束。如果所有">
+<meta property="og:description" content="井字棋相关题目1275. 找出井字棋的获胜者 A 和 B 在一个 3 x 3 的网格上玩井字棋。井字棋游戏的规则如下： 玩家轮流将棋子放在空方格 (“ “) 上。第一个玩家 A 总是用 X 作为棋子，而第二个玩家 B 总是用 O 作为棋子。X 和 O 只能放在空方格中，而不能放在已经被占用的方格上。只要有 3 个相同的（非空）棋子排成一条直线（行、列、对角线）时，游戏结束。如果所有方块都放满棋子（">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-13T04:59:21.000Z">
-<meta property="article:modified_time" content="2022-04-13T05:19:52.654Z">
+<meta property="article:modified_time" content="2022-04-19T04:50:29.989Z">
 <meta property="article:author" content="Super Farmer">
 <meta property="article:tag" content="leetcode-solution">
 <meta property="article:tag" content="interview">
@@ -252,15 +252,15 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：April 13, 2022 pm
+                  本文最后更新于：April 19, 2022 pm
                 
               </p>
             
             <div class="markdown-body">
               <h1 id="井字棋相关题目"><a href="#井字棋相关题目" class="headerlink" title="井字棋相关题目"></a>井字棋相关题目</h1><h2 id="1275-找出井字棋的获胜者"><a href="#1275-找出井字棋的获胜者" class="headerlink" title="1275. 找出井字棋的获胜者"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-winner-on-a-tic-tac-toe-game/">1275. 找出井字棋的获胜者</a></h2><blockquote>
 <p>A 和 B 在一个 3 x 3 的网格上玩井字棋。<br>井字棋游戏的规则如下：</p>
-<p>玩家轮流将棋子放在空方格 (“ “) 上。<br>第一个玩家 A 总是用 “X” 作为棋子，而第二个玩家 B 总是用 “O” 作为棋子。<br>“X” 和 “O” 只能放在空方格中，而不能放在已经被占用的方格上。<br>只要有 3 个相同的（非空）棋子排成一条直线（行、列、对角线）时，游戏结束。<br>如果所有方块都放满棋子（不为空），游戏也会结束。<br>游戏结束后，棋子无法再进行任何移动。<br>给你一个数组 moves，其中每个元素是大小为 2 的另一个数组（元素分别对应网格的行和列），它按照 A 和 B 的行动顺序（先 A 后 B）记录了两人各自的棋子位置。</p>
-<p>如果游戏存在获胜者（A 或 B），就返回该游戏的获胜者；如果游戏以平局结束，则返回 “Draw”；如果仍会有行动（游戏未结束），则返回 “Pending”。</p>
+<p>玩家轮流将棋子放在空方格 (“ “) 上。<br>第一个玩家 A 总是用 <code>X</code> 作为棋子，而第二个玩家 B 总是用 <code>O</code> 作为棋子。<br><code>X</code> 和 <code>O</code> 只能放在空方格中，而不能放在已经被占用的方格上。<br>只要有 3 个相同的（非空）棋子排成一条直线（行、列、对角线）时，游戏结束。<br>如果所有方块都放满棋子（不为空），游戏也会结束。<br>游戏结束后，棋子无法再进行任何移动。<br>给你一个数组 <code>moves</code>，其中每个元素是大小为 2 的另一个数组（元素分别对应网格的行和列），它按照 A 和 B 的行动顺序（先 A 后 B）记录了两人各自的棋子位置。</p>
+<p>如果游戏存在获胜者（A 或 B），就返回该游戏的获胜者；如果游戏以平局结束，则返回 <code>Draw</code>；如果仍会有行动（游戏未结束），则返回 <code>Pending</code>。</p>
 <p>你可以假设 moves 都 有效（遵循井字棋规则），网格最初是空的，A 将先行动。</p>
 <p>来源：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-winner-on-a-tic-tac-toe-game">LeetCode-1275</a></p>
 </blockquote>
@@ -269,7 +269,7 @@
 
 <h2 id="九宫格游戏"><a href="#九宫格游戏" class="headerlink" title="九宫格游戏"></a>九宫格游戏</h2><p><strong>机试题</strong></p>
 <blockquote>
-<p>1.A和B两名玩家轮流在3*3的棋盘中画上叉和圈的图形；</p>
+<p>1.A和B两名玩家轮流在<code>3*3</code>的棋盘中画上叉和圈的图形；</p>
 <p>2.画叉的玩家先进行游戏；</p>
 <p>3.任何一方玩家（叉或圈）在横，竖，对角线上凑齐3个相同的图形则算胜利。<br>请根据给出的九官格游戏棋盘状态判断该局游戏的最终结果。<br>(假设参加游戏的两名玩家都足够聪明，即会选择最有利于自己胜利的方式进行游戏）</p>
 </blockquote>
@@ -277,7 +277,7 @@
 <li><p>输入描述：</p>
 <blockquote>
 <p>1.N,表示下面会有N组数组描述N个九宫格游戏棋盘状态</p>
-<p>2.之后每3行分别为xyz的数组，分别表示1,2,3行棋盘，不同棋盘状态之<br>用一行隔开。其中，0表示棋盘格子没有画上图形：1表示棋盘格子画上了叉：2表示棋盘格子画上了圈。</p>
+<p>2.之后每3行分别为xyz的数组，分别表示1,2,3行棋盘，不同棋盘状态之<br>用一行隔开。其中，<code>0</code>表示棋盘格子没有画上图形：<code>1</code>表示棋盘格子画上了叉：<code>2</code>表示棋盘格子画上了圈。</p>
 </blockquote>
 </li>
 <li><p>输出描述</p>
